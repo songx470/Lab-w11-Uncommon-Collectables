@@ -56,8 +56,8 @@ function showSoaps() {
   console.log("showSoaps()");
   soaps.forEach(soap => {
     // create container for each song
-    var songContainer = document.createElement("div");
-    songContainer.classList.add("soap-container");
+    var soapContainer = document.createElement("div");
+    soapContainer.classList.add("soap-container");
     document.querySelector(".container").append(soapContainer);
 
     // add song titles
@@ -66,67 +66,20 @@ function showSoaps() {
     soapName.innerText = soap.fields.name;
     soapContainer.append(soapName);
 
+     var soapImage = document.createElement("img");
+    soapImage.classList.add("soap-image");
+    soapImage.src = soap.fields.image[0].url;
+    soapContainer.append(soapImage);
+
     var soapLink = document.createElement("p");
     soapLink.classList.add("soap-link");
     soapLink.innerText = soap.fields.link;
-    soapLink.append(soapLink);
-
-    var soapImage = document.createElement("img");
-    soapImage.classList.add("soap-image");
-    soapImage.src = soap.fields.soap_image[0].url;
-    soapContainer.append(soapImage);
+    soapContainer.append(soapLink);
 
     // add event listener to add active class to song container
     soapContainer.addEventListener("click", function(event) {
-      soapDescription.classList.toggle("active");
       soapImage.classList.toggle("active");
-    });
-
-    // get genre field from airtable
-    // loop through the array and add each genre as
-    // a class to the song container
-
-    var soapGenre = soap.fields.genre;
-    soapGenre.forEach(function(genre) {
-      soapContainer.classList.add(genre);
-    });
-
-    // clicking on filter by pop
-    // change background of pop genres to red
-    // else change to white
-    var filterPop = document.querySelector(".pop");
-    filterPop.addEventListener("click", function() {
-      if (songContainer.classList.contains("pop")) {
-        songContainer.style.background = "red";
-      } else {
-        songContainer.style.background = "white";
-      }
-    });
-
-    // filter by indie music
-    var filterIndie = document.querySelector(".indie");
-    filterIndie.addEventListener("click", function() {
-      if (soapContainer.classList.contains("indie")) {
-        soapContainer.style.background = "red";
-      } else {
-        soapContainer.style.background = "white";
-      }
-    });
-    
-    // filter by shoegaze music
-    var filterShoegaze = document.querySelector(".shoegaze");
-    filterShoegaze.addEventListener("click", function() {
-      if (songContainer.classList.contains("shoegaze")) {
-        songContainer.style.background = "red";
-      } else {
-        songContainer.style.background = "white";
-      }
-    });
-
-    // filter reset
-    var filterReset = document.querySelector(".js-reset");
-    filterReset.addEventListener("click", function() {
-      soapContainer.style.background = "white";
+      soapLink.classList.toggle("active");
     });
   });
 }

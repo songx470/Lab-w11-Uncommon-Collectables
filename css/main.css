@@ -12,26 +12,26 @@ h1 {
   margin: 0;
 }
 
-.song-description {
+.soap-description {
   display: none;
 }
 
-.song-description.active {
+.soap-description.active {
   display: block;
 }
 
-.song-image {
+.soap-image {
   width: 100%;
   max-width: 400px;
   height: auto;
   display: none;
 }
 
-.song-image.active {
+.soap-image.active {
   display: block;
 }
 
-.song-container {
+.soap-container {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -48,13 +48,13 @@ h1 {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
-.song-container:hover {
+.soap-container:hover {
   border: 1px solid black;
   border-radius: 25px;
   cursor: pointer;
 }
 
-.song-container.active .song-title {
+.soap-container.active .soap-title {
   display: block;
 }
 

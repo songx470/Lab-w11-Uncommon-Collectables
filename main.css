@@ -1,0 +1,100 @@
+body {
+  font-family: Arial;
+  background-color:#bde2fc;
+  cursor: url(img/smi358.cur), auto;
+}
+
+.container {
+  margin-top:2rem;
+  padding: 5rem;
+   white-space: nowrap;
+   cursor: url(img/smi358.cur), auto;
+}
+
+h1 {
+  cursor: url(img/smi358.cur), auto;
+  font-family: 'Cute Font', cursive;
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.soap-link {
+  cursor: url(img/smi358.cur), auto;
+  margin-top:-3px;
+  font-family: 'Cute Font', cursive;
+  font-size:1.5rem;
+  display: none;
+}
+
+.soap-link.active  {
+  cursor: url(img/smi358.cur), auto;
+  display: block;
+}
+
+.soap-image.active {
+  cursor: url(img/smi358.cur), auto;
+  display: block;
+  display: inline-block
+}
+
+.soap-image {
+  cursor: url(img/smi358.cur), auto;
+  margin-top:20px;
+  margin-bottom:30px;
+  height: 300px;
+  width: 100%;
+  border-radius:10px;
+  display: none;
+  display: inline-block
+}
+
+.soap-image.active {
+  cursor: url(img/smi358.cur), auto;
+  display: block;
+  display: inline-block
+}
+
+.soap-container {
+  cursor: url(img/smi358.cur), auto;
+  background-color:;
+  margin-right:50px;
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 1px solid black;
+    border-radius: 25px;
+  display: inline-block
+}
+
+.image-container {
+  cursor: url(img/smi358.cur), auto;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  display: inline-block
+}
+.soap-container:hover {
+  cursor: url(img/smi358.cur), auto;
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: url(img/smi358.cur), auto;
+  background-color:white;
+}
+
+.soap-container.active .soap-title {
+  cursor: url(img/smi358.cur), auto;
+  display: block;
+  display: inline-block
+}
+
+.filter {
+  padding: 2rem;
+  cursor: pointer;
+}
+
